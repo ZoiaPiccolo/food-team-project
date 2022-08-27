@@ -3,14 +3,41 @@
     <h1 class="hero__title section__title">
       Enjoy Your Favorite Food From Anywhere
     </h1>
-    <p class="hero__descr section__dscr">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-      varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-      ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-    </p>
-    <button class="hero__button main-btn" type="button">Order Now</button>
-  </div>
-  <div class="hero__wrap">
-    <picture><img src="#" alt="Food" /> </picture>
+    <div class="hero__thumb">
+      <div class="hero__bloc">
+        <p class="hero__descr section__dscr">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+          ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+        </p>
+        <button class="hero__button main-btn" type="button">Order Now</button>
+      </div>
+      <div class="hero__wrap">
+        <picture
+          ><source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/hero/img-1@1x_l.png 1x,
+              ./images/hero/img-1@2x_l.png 2x
+            "
+            type="image/png"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/hero/img-1@1x_m.png 1x,
+              ./images/hero/img-1@2x_m.png 2x
+            "
+            type="image/png"
+          />
+          <img
+            src="./images/hero/img-1@1x_m.png"
+            alt="Food"
+            width="528"
+            height="528"
+          />
+        </picture>
+      </div>
+    </div>
   </div>
 </section>
