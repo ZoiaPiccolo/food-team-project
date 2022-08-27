@@ -41,8 +41,6 @@
       margin-right: auto;
     }
   }
-  &__descr {
-  }
   &__button {
     margin-right: auto;
     background-color: #bbf330;
@@ -64,6 +62,11 @@
     min-width: 336px;
     overflow: hidden;
     cursor: pointer;
+
+    &:hover,
+    &focus {
+      border-color: $greenbtn-color;
+    }
   }
   &__slider {
     display: none;
@@ -119,6 +122,10 @@
     &:hover,
     &:focus {
       fill: #7eb101;
+    }
+    &:hover ~ .hero__wrap,
+    &:focus ~ .hero__wrap {
+      border-color: $greenbtn-color;
     }
   }
 }
