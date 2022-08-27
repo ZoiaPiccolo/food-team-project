@@ -2,48 +2,73 @@
 
 <footer class="footer">
   <div class="container">
-    <a href="" class="header__logo link">
-      <img />
+    <a href="" class="logo">
+      <img class="logo__img" width="" height="" />
     </a>
   </div>
 
   <!--nav-->
-  <ul class="nav list list">
-    <li class="header__item item">Home</li>
-    <li class="header__item item">About</li>
-    <li class="header__item item">Service</li>
-    <li class="header__item item">Menu</li>
-    <li class="header__item item">Contact</li>
+
+  <ul class="nav">
+    <li class="nav__item">
+      <a href="" class="nav__link" rel="noreferrer noopener">Home</a>
+    </li>
+    <li class="nav__item">
+      <a href="" class="nav__link" rel="noreferrer noopener">About</a>
+    </li>
+    <li class="nav__item">
+      <a href="" class="nav__link" rel="noreferrer noopener">Service</a>
+    </li>
+    <li class="nav__item">
+      <a href="" class="nav__link" rel="noreferrer noopener">Menu</a>
+    </li>
+    <li class="nav__item">
+      <a href="" class="nav__link" rel="noreferrer noopener">Contact</a>
+    </li>
   </ul>
 
   <!--footer-form-->
   <div class="footer__form">
     <h3 class="footer__title">Subscribe</h3>
-    <label class="footer__label" for="">
-      <input class="footer__input" type="email" name="email" />
-    </label>
-    <button class="footer__button" type="button">Subscribe</button>
-    <p class="footer__article">
-      By subscribing you agree to with our
-      <span class="footer__order">Privacy Policy</span>
-    </p>
+    <form action="">
+      <label class="footer__label">
+        <input class="footer__input" type="email" name="email" />
+      </label>
+      <button class="footer__button main-btn" type="button">Subscribe</button>
+      <p class="footer__text">
+        By subscribing you agree to with our
+        <a
+          class="footer__link footer__link--main"
+          href=""
+          target="_blank"
+          rel="noreferrer noopener"
+          >Privacy Policy</a
+        >
+      </p>
+    </form>
 
     <!--Privacy Policy link-->
     <div class="privacy">
       <!--privasy для оформлення, посталю флекс-->
       <ul class="footer__list list">
         <li class="footer__item item">
-          <a href="" class="footer__link link">Privacy Policy</a>
+          <a href="" class="footer__link link" rel="noreferrer noopener"
+            >Privacy Policy</a
+          >
         </li>
         <li class="footer__item item">
-          <a href="" class="footer__link link">Terms of Service</a>
+          <a href="" class="footer__link link" rel="noreferrer noopener"
+            >Terms of Service</a
+          >
         </li>
         <li class="footer__item item">
-          <a href="" class="footer__link link">Cookies Settings</a>
+          <a href="" class="footer__link link" rel="noreferrer noopener"
+            >Cookies Settings</a
+          >
         </li>
       </ul>
 
-      <p class="privacy-policy">2022 FoodSta. All right reserved.</p>
+      <p class="footer__text">2022 FoodSta. All right reserved.</p>
     </div>
   </div>
 </footer>
