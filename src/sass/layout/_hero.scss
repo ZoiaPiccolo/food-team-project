@@ -7,20 +7,39 @@
     padding-top: 60px;
     padding-bottom: 50px;
     @include mq(tab) {
-      flex-direction: column;
-      gap: 0;
+      flex-direction: row;
+      gap: 32px;
+    }
+    @include mq(desk) {
     }
   }
   &__thumb {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 28px;
     @include mq(tab) {
-      gap: 32px;
+      gap: 44px;
+    }
+    @include mq(desk) {
+      max-width: 502px;
+      gap: 28px;
+    }
+  }
+  &__bloc {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    @include mq(tab) {
+      gap: 40px;
     }
   }
   &__title {
     margin-bottom: 0;
+    @include mq(desk) {
+      display: flex;
+      align-items: baseline;
+      margin-right: auto;
+    }
   }
   &__descr {
   }
@@ -29,29 +48,77 @@
     background-color: #bbf330;
     border: none;
     padding: 6px 17px;
+    &:hover,
+    &:focus {
+      background-color: #b5ff00;
+    }
   }
   &__wrap {
-    display: none;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    border-width: 14px;
     border-style: solid;
     border-color: $yellow-color;
     border-radius: 50%;
-    min-width: 320px;
+    min-width: 336px;
     overflow: hidden;
     cursor: pointer;
+  }
+  &__slider {
+    display: none;
+    position: relative;
     @include mq(tab) {
       display: flex;
       margin-top: auto;
     }
-
     @include mq(desk) {
       display: block;
+      margin-left: auto;
+    }
+    @include mq(desk) {
+      display: block;
+      margin-left: auto;
     }
   }
-}
-.section {
-  &__title {
+  &__icon-left {
+    position: absolute;
+    width: 34px;
+    height: 28px;
+    top: 45%;
+    right: 93%;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+
+    @include mq(desk) {
+      width: 48px;
+      height: 40px;
+      right: 95%;
+    }
+    &:hover,
+    &:focus {
+      fill: #7eb101;
+    }
   }
-  &__dscr {
+  &__icon-right {
+    position: absolute;
+    width: 34px;
+    height: 28px;
+    top: 45%;
+    left: 93%;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+
+    @include mq(desk) {
+      width: 48px;
+      height: 40px;
+      left: 95%;
+    }
+    &:hover,
+    &:focus {
+      fill: #7eb101;
+    }
   }
 }
