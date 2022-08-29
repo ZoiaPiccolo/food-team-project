@@ -1,0 +1,90 @@
+.header {
+    position: relative;
+}
+.mobile__list {
+    @extend %list;
+    @include flex-set(32);
+}
+
+.mobile__item{
+    @include flex-basis(1);
+}
+
+
+
+.mobile__link {
+    @extend %link;
+    padding: 16px;
+    font-size: 16px;
+     
+    &:hover,
+    &:focus{
+        background-color: #fffff;
+    }
+}
+
+
+
+
+.menu__button {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    background-color: transparent;
+    color: $darkgreen-color;
+    border: none;
+
+    &:hover,
+    &:focus {
+        color: $yellow-color;
+    }
+}
+
+.icon-menu {
+    fill: currentColor;
+} 
+.menu__button--close{
+    position: absolute;
+    right: 4px;
+    top: 4px;
+}
+
+
+
+.menu-container {
+    position: fixed;
+    top: 70px;
+    right: 50px;
+    padding: 16px;
+    max-width: 130px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    background-color: $darkgreen-color;
+    box-shadow: $menushadow-color;
+    transform: translateX(130%);
+    transition: transform $transition;
+    
+}
+
+.menu-container.is-open {
+    transform: translateX(0);
+} 
+@include mq (tab) {
+
+    .menu__button,
+    .menu__button--close,
+    .menu-container {
+        display: none;
+    }
+}
+
+@include mq(mob-only) {
+    .header__content {
+        display: none;
+    }
+}
+
+
+
+
