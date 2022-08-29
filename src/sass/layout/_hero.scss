@@ -5,7 +5,6 @@
     align-items: center;
     gap: 28px;
     padding-top: 60px;
-    padding-bottom: 50px;
     @include mq(tab) {
       flex-direction: row;
       gap: 32px;
