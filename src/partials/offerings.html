@@ -1,9 +1,40 @@
 <section class="offerings offerings__overlay" id="about">
   <div class="offerings__container container">
     <div class="offerings__thumb">
-      <picture><img src="#" alt="Apple" /></picture>
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ./images/offerings/apple@1x_l.png 1x,
+            ./images/offerings/apple@2x_l.png 2x
+          "
+          type="image/png" />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./images/offerings/apple@1x_m.png 1x,
+            ./images/offerings/apple@2x_m.png 2x
+          "
+          type="image/png"
+          width="704"
+          height="394" />
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./images/offerings/apple@1x_l.png 1x,
+            ./images/offerings/apple@1x_l.png 2x
+          "
+          type="image/png"
+          width="550"
+          height="604" />
+        <img
+          src="./images/offerings/apple@1x_s.png"
+          alt="Apple"
+          width="550"
+          height="604"
+      /></picture>
     </div>
-    <div class="offerings__container container">
+    <div class="offerings__block">
       <h2 class="offerings__title section__title">
         What’s Special About Our Offerings
       </h2>
@@ -14,7 +45,9 @@
       </p>
       <ul class="offerings__list list">
         <li class="offerings__item">
-          <svg class="offerings__icon"><use></use></svg>
+          <svg class="offerings__icon" width="48" height="48">
+            <use href="./images/icons.svg#icon-delivery"></use>
+          </svg>
           <h3 class="offerings__subtitle">Fasest Delivery</h3>
           <p class="offerings__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -22,7 +55,9 @@
           </p>
         </li>
         <li class="offerings__item">
-          <svg class="offerings__icon"><use></use></svg>
+          <svg class="offerings__icon" width="48" height="48">
+            <use href="./images/icons.svg#icon-order"></use>
+          </svg>
           <h3 class="offerings__subtitle">Easy To Order</h3>
           <p class="offerings__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -30,14 +65,18 @@
           </p>
         </li>
       </ul>
-      <button class="offerings__btn main-btn" type="button">Order Now</button>
-      <a
-        class="offerings__link"
-        href="#"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Read More <svg class="offerings__mark"><use></use></svg
-      ></a>
+      <div class="offerings__wrap">
+        <button class="offerings__btn main-btn" type="button">Order Now</button>
+        <a
+          class="offerings__link"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Read More
+          <svg class="offerings__mark" width="14" height="14">
+            <use href="./images/icons.svg#icon-offering"></use></svg
+        ></a>
+      </div>
     </div>
   </div>
 </section>
