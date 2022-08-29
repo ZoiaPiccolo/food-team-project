@@ -1,29 +1,108 @@
 .offerings {
-  &__overlay {
-    background-image: './images/backgraund-offerings_l.svg';
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50;
+    display: block;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/backgraund-offerings_s.svg');
+
+    @include mq(tab) {
+      background-image: url('../images/backgraund-offerings_m.svg');
+    }
+    @include mq(desk) {
+      background-image: url('../images/backgraund-offerings_l.svg');
+    }
   }
   &__container {
+    padding-top: 41px;
+    padding-bottom: 60px;
+
+    @include mq(desk) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
   &__thumb {
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 280px;
+    height: 309px;
+
+    @include mq(tab) {
+      margin-top: 100px;
+      width: 704px;
+      height: 394px;
+    }
+    @include mq(desk) {
+      width: 550px;
+      height: 604px;
+    }
+  }
+  &__block {
+    padding-top: 99px;
+    @include mq(desk) {
+    }
   }
   &__title {
+    margin-bottom: 28px;
+    max-width: 526px;
   }
   &__descr {
+    margin-bottom: 28px;
+    max-width: 526px;
   }
   &__list {
+    @extend %list;
+    @include flex-set(28px);
+    margin-bottom: 28px;
+
+    @include mq(tab) {
+      @include flex-set(116px);
+      margin-bottom: 40px;
+    }
   }
   &__item {
+    max-width: 252px;
+    @include flex-basis(1);
+
+    @include mq(tab) {
+      @include flex-basis(2);
+    }
   }
   &__icon {
+    margin-bottom: 8px;
   }
   &__subtitle {
+    margin-bottom: 16px;
   }
   &__text {
   }
+  &__wrap {
+    @include flex-set(20px);
+    @include flex-basis(2);
+  }
   &__btn {
+    min-width: 130px;
+    padding: 10px 32px;
+    border-color: $darkgreen-color;
   }
   &__link {
+    @extend %link;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   &__mark {
+    margin-left: 3px;
   }
 }
