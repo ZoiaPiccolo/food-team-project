@@ -1,31 +1,41 @@
 .offerings {
-  position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    top: -150;
-    display: block;
-    z-index: -100;
-    width: 100%;
-    height: 100%;
+  font-size: 14;
+  line-height: calc(16 / 14);
 
-    margin-left: auto;
-    margin-right: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('../images/backgraund-offerings_s.svg');
+  &__container {
+    position: relative;
+    padding-bottom: 60px;
 
     @include mq(tab) {
-      background-image: url('../images/backgraund-offerings_m.svg');
-      height: 1140px;
+      padding-bottom: 100px;
     }
     @include mq(desk) {
-      background-image: url('../images/backgraund-offerings_l.svg');
-      height: 856px;
+      padding-bottom: 75px;
     }
-  }
-  &__container {
-    padding-bottom: 60px;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      z-index: -100;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('../images/backgraund-offerings_s.svg');
+
+      @include mq(tab) {
+        background-image: url('../images/backgraund-offerings_m.svg');
+        top: -150;
+        min-height: 1140px;
+      }
+      @include mq(desk) {
+        background-image: url('../images/backgraund-offerings_l.svg');
+        top: -180;
+        min-height: 856px;
+      }
+    }
 
     @include mq(desk) {
       display: flex;
@@ -34,16 +44,15 @@
     }
   }
   &__thumb {
-    margin-bottom: 60px;
     margin-left: auto;
     margin-right: auto;
     width: 280px;
     height: 309px;
+    padding-top: 41px;
 
     @include mq(tab) {
-      margin-top: 10px;
+      margin-bottom: 60px;
       width: 704px;
-      height: 394px;
     }
     @include mq(desk) {
       width: 550px;
@@ -54,16 +63,33 @@
   }
   &__block {
     padding-top: 99px;
+    @include mq(tab) {
+    }
     @include mq(desk) {
     }
   }
   &__title {
     margin-bottom: 28px;
     max-width: 526px;
+    @include mq(mob-only) {
+      max-width: 280px;
+    }
   }
   &__descr {
     margin-bottom: 28px;
     max-width: 526px;
+    @include mq(mob-only) {
+      font-size: 14;
+      max-width: 272px;
+    }
+    @include mq(tab) {
+      font-size: 16px;
+      line-height: calc(19 / 16);
+    }
+    @include mq(desk) {
+      font-size: 16px;
+      line-height: calc(24 / 16);
+    }
   }
   &__list {
     @extend %list;
@@ -87,9 +113,19 @@
     margin-bottom: 8px;
   }
   &__subtitle {
+    font-size: 18px;
+    line-height: calc(21 / 18);
     margin-bottom: 16px;
+    @include mq(desk) {
+      font-size: 14px;
+      line-height: calc(24 / 17);
+    }
   }
   &__text {
+    @include mq(desk) {
+      font-size: 14px;
+      line-height: calc(21 / 14);
+    }
   }
   &__wrap {
     @include flex-set(20px);
@@ -99,12 +135,28 @@
     min-width: 130px;
     padding: 10px 32px;
     border-color: $darkgreen-color;
+    transition-property: border-color;
+    transition: $transition;
+
+    &:hover,
+    &:focus {
+      border-color: $borderbtnhover-color;
+    }
   }
   &__link {
     @extend %link;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition-property: fill, color;
+    transition: $transition;
+
+    &:hover,
+    &:focus {
+      color: $darkgreen-color;
+      fill: $darkgreen-color;
+    }
     @include mq(desk) {
       display: none;
     }
