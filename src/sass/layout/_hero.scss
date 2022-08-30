@@ -5,11 +5,16 @@
     align-items: center;
     gap: 28px;
     padding-top: 60px;
+    padding-bottom: 50px;
     @include mq(tab) {
       flex-direction: row;
+      align-items: start;
       gap: 32px;
+      padding-bottom: 42px;
     }
     @include mq(desk) {
+      align-items: center;
+      padding-bottom: 42px;
     }
   }
   &__thumb {
@@ -40,14 +45,22 @@
       margin-right: auto;
     }
   }
+  &__descr {
+    @include mq(mob-only) {
+      font-size: 14px;
+      line-height: calc(21 / 14);
+    }
+  }
   &__button {
     margin-right: auto;
-    background-color: #bbf330;
+    background-color: $greenbtn-color;
     border: none;
     padding: 6px 17px;
+    transition-property: background-color;
+    transition: $transition;
     &:hover,
     &:focus {
-      background-color: #b5ff00;
+      background-color: $greenbtnhover-color;
     }
   }
   &__wrap {
@@ -62,9 +75,14 @@
     overflow: hidden;
     cursor: pointer;
 
+    transition-property: border-color;
+    transition: $transition;
+
     &:hover,
     &focus {
       border-color: $greenbtn-color;
+    }
+    @include mq(tab) {
     }
   }
   &__slider {
@@ -72,26 +90,27 @@
     position: relative;
     @include mq(tab) {
       display: flex;
-      margin-top: auto;
+      margin-top: 120px;
     }
     @include mq(desk) {
       display: block;
       margin-left: auto;
-    }
-    @include mq(desk) {
-      display: block;
-      margin-left: auto;
+      height: min-content;
     }
   }
   &__icon-left {
     position: absolute;
     width: 34px;
     height: 28px;
-    top: 45%;
+    top: 54%;
     right: 93%;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+
+    transition-property: fill;
+    transition: $transition;
 
     @include mq(desk) {
       width: 48px;
@@ -100,18 +119,22 @@
     }
     &:hover,
     &:focus {
-      fill: #7eb101;
+      fill: $darkgreen-color;
     }
   }
   &__icon-right {
     position: absolute;
     width: 34px;
     height: 28px;
-    top: 45%;
+    top: 54%;
     left: 93%;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+
+    transition-property: fill;
+    transition: $transition;
 
     @include mq(desk) {
       width: 48px;
@@ -120,11 +143,17 @@
     }
     &:hover,
     &:focus {
-      fill: #7eb101;
+      fill: $darkgreen-color;
     }
-    &:hover ~ .hero__wrap,
-    &:focus ~ .hero__wrap {
-      border-color: $greenbtn-color;
-    }
+  }
+}
+.swiper {
+  @include mq(tab) {
+    width: 298px;
+    height: 298px;
+  }
+  @include mq(desk) {
+    width: 528px;
+    height: 528px;
   }
 }

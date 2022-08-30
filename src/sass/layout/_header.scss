@@ -1,7 +1,3 @@
-
-
-
-
 .header-container{
     display: flex;
    
@@ -22,17 +18,26 @@
     padding-bottom: 28px;
     font-size: 14px;
     line-height: calc(16 / 14);
+    transition: $transition;
+
+    &:hover,
+    &:focus{
+        color:$greenbtn-color;
+        text-decoration: underline;
+    }
     
 }
 
 .header__content{
     display: flex;
     margin-left: auto;
+    align-items: center;
 }
 
 .header__btn{
    
-    min-width: 100px;
+    max-height: 32px;
+    max-width: 98px;
     margin-left: 28px;
     padding: 6px 17px;
     background-color: $greenbtn-color;

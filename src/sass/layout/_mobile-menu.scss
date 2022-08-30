@@ -8,23 +8,19 @@
 
 .mobile__item{
     @include flex-basis(1);
+
+   
 }
-
-
 
 .mobile__link {
     @extend %link;
     padding: 16px;
     font-size: 16px;
      
-    &:hover,
-    &:focus{
-        background-color: #fffff;
-    }
+   &:hover{
+    background-color: $darkgreen-color;
+   }
 }
-
-
-
 
 .menu__button {
     display: flex;
@@ -47,22 +43,26 @@
     position: absolute;
     right: 4px;
     top: 4px;
+
+   &:hover{
+    background-color: $darkgreen-color;
+   }
 }
 
 
 
 .menu-container {
     position: fixed;
-    top: 70px;
-    right: 50px;
+    top: 50px;
+    right: 20px;
     padding: 16px;
     max-width: 130px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     border-top-left-radius: 30px;
-    background-color: $darkgreen-color;
+    background-color: $menubgd-color;
     box-shadow: $menushadow-color;
-    transform: translateX(130%);
+    transform: translateX(150%);
     transition: transform $transition;
     
 }
