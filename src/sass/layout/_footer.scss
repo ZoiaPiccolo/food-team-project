@@ -1,6 +1,36 @@
 .footer {
   margin-left: auto;
   margin-right: auto;
+  //mobile screen
+  background-image: url('../images/footer/mobile/img1@1x_sm.png'),
+    url('../images/footer/mobile/img2@1x_sm.png'),
+    url('../images/footer/mobile/img3@1x_sm.png');
+  background-repeat: no-repeat;
+  background-position: top right, 0px 137px, bottom center;
+  @media screen and (min-width: 768px) {
+    background-image: url('../images/footer/tablet/img7@1x_md.png'),
+      url('../images/footer/tablet/img5@1x_md.png'),
+      url('../images/footer/tablet/img6@1x_md.png'),
+      url('../images/footer/tablet/img4@1x_md.png'),
+      url('../images/footer/tablet/img1@1x_md.png'),
+      url('../images/footer/tablet/img2@1x_md.png'),
+      url('../images/footer/tablet/img3@1x_md.png');
+    background-position: top right, left bottom, left 153px bottom,
+      left 214px bottom, bottom left 314px, bottom right 94px, bottom right;
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: url('../images/footer/desktop/img4@1x_lg.png'),
+      url('../images/footer/desktop/img3@1x_lg.png'),
+      url('../images/footer/desktop/img5@1x_lg.png'),
+      url('../images/footer/desktop/img8@1x_lg.png'),
+      url('../images/footer/desktop/img1@1x_lg.png'),
+      url('../images/footer/desktop/img2@1x_lg.png'),
+      url('../images/footer/desktop/img6@1x_lg.png'),
+      url('../images/footer/desktop/img7@1x_lg.png');
+    background-position: left 340px bottom, left 450px bottom, left 53px bottom,
+      left 216px bottom, left 280px bottom, bottom right 282px,
+      bottom right 118px, bottom right;
+  }
 
   &__container {
     margin-left: auto;
