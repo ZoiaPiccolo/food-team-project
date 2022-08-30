@@ -1,0 +1,49 @@
+<!--Backdrop-->
+
+<div class="backdrop is-hidden" data-modal>
+  <div class="backdrop__modal">
+    <button class="backdrop__btn" type="button" data-modal-close>
+      <svg class="backdrop__btn-icon" width="32px" height="32px">
+        <use href="./images/close.svg#icon-close"></use>
+      </svg>
+    </button>
+    <!--Form-modal-->
+    <form class="form">
+      <strong class="form__title">Order Form</strong>
+
+      <span class="form__text">Name</span>
+      <label class="form__label">
+        <input
+          class="form__input"
+          name="Name"
+          type="text"
+          placeholder="Your name"
+        />
+      </label>
+
+      <span class="form__text">Phone number</span>
+      <label class="form__label">
+        <input
+          class="form__input"
+          name="Phone"
+          type="tel"
+          placeholder="+38(0_ _) _ _ _   _ _   _ _"
+        />
+      </label>
+
+      <span class="form__text">E-mail</span>
+      <label class="form__label">
+        <input
+          class="form__input"
+          name="Email"
+          type="email"
+          placeholder="example@gmail.com"
+        />
+      </label>
+
+      <button class="form__button main-btn" type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
+<script src="./js/modal.js"></script>

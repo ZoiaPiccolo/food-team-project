@@ -214,6 +214,9 @@
   }
 }
 .privacy-text {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: calc(12 / 10);
   display: block;
   color: #2c2c2c;
   text-align: center;
@@ -221,5 +224,8 @@
   margin-right: auto;
   @media screen and (min-width: 768px) {
     margin-right: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
   }
 }
