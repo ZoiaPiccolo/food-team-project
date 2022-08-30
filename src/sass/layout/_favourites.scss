@@ -26,6 +26,7 @@ border-color: $yellow-color;
 border-radius: 50%;
 overflow: hidden;
 cursor: pointer;
+transition: border-color $transition;
 
 &:hover,
 &:focus{

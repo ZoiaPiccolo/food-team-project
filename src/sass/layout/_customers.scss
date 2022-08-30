@@ -60,6 +60,10 @@
 }
 
 .customers__content{
+    width: 160px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: $darkgreen-color;
     display: flex;
 }
 
@@ -85,15 +89,15 @@
     line-height: calc(21 / 14);
 }
 
-.customers__content::after{
-    display: block;
-    content: '';
-    height: 52px;
-    width: 1px;
-    margin-left: 16px;
-    background-color: $darkgreen-color;
+// .customers__content::after{
+//     display: block;
+//     content: '';
+//     height: 52px;
+//     width: 1px;
+//     margin-left: 16px;
+//     background-color: $darkgreen-color;
 
-}
+// }
 
 @include mq(tab){
 .customers{

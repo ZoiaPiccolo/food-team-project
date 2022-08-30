@@ -100,8 +100,8 @@
   }
   &__icon-left {
     position: absolute;
-    width: 34px;
-    height: 28px;
+    width: 28px;
+    height: 34px;
     top: 54%;
     right: 93%;
     border-radius: 8px;
@@ -124,8 +124,8 @@
   }
   &__icon-right {
     position: absolute;
-    width: 34px;
-    height: 28px;
+    width: 28px;
+    height: 34px;
     top: 54%;
     left: 93%;
     border-radius: 8px;
@@ -157,3 +157,23 @@
     height: 528px;
   }
 }
+
+@include mq(tab){
+  .hero{
+    margin-top: 72px;
+  }
+}
+
+.swiper-button-next{
+  transform: rotateX(60deg);
+ 
+}
+
+.swiper-button-prev{
+ 
+  transform: rotateX(60deg);
+}
+
+
+
+
