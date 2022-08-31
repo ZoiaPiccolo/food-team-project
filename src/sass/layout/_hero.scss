@@ -1,20 +1,27 @@
 .hero {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  @include mq(tab) {
+    padding-bottom: 120px;
+  }
+  @include mq(desk) {
+    margin-top: 72px;
+    padding-top: 14px;
+    padding-bottom: 42px;
+  }
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 28px;
-    padding-top: 60px;
-    padding-bottom: 50px;
     @include mq(tab) {
       flex-direction: row;
       align-items: start;
       gap: 32px;
-      padding-bottom: 42px;
     }
     @include mq(desk) {
       align-items: center;
-      padding-bottom: 42px;
     }
   }
   &__thumb {
@@ -39,6 +46,9 @@
   }
   &__title {
     margin-bottom: 0;
+    @include mq(tab) {
+      max-width: 537px;
+    }
     @include mq(desk) {
       display: flex;
       align-items: baseline;
@@ -49,6 +59,9 @@
     @include mq(mob-only) {
       font-size: 14px;
       line-height: calc(21 / 14);
+    }
+    @include mq(tab) {
+      max-width: 336px;
     }
   }
   &__button {
@@ -82,20 +95,24 @@
     &focus {
       border-color: $greenbtn-color;
     }
-    @include mq(tab) {
+    @include mq(desk) {
+      border-width: 26px;
     }
   }
   &__slider {
     display: none;
     position: relative;
-    @include mq(tab) {
+    @include mq(tab-only) {
+      position: absolute;
+      left: 52%;
+      top: 28%;
       display: flex;
-      margin-top: 120px;
     }
     @include mq(desk) {
       display: block;
       margin-left: auto;
       height: min-content;
+      margin-top: 0;
     }
   }
   &__icon-left {
@@ -157,23 +174,21 @@
     height: 528px;
   }
 }
-
-@include mq(tab){
-  .hero{
-    margin-top: 72px;
+.hero__icon-right.swiper-button-next {
+  right: -10px;
+  width: 48px;
+  height: 40px;
+  @include mq(tab-only) {
+    width: 34px;
+    height: 28px;
   }
 }
-
-.swiper-button-next{
-  transform: rotateX(60deg);
- 
+.hero__icon-left.swiper-button-prev {
+  left: -10px;
+  width: 48px;
+  height: 40px;
+  @include mq(tab-only) {
+    width: 34px;
+    height: 28px;
+  }
 }
-
-.swiper-button-prev{
- 
-  transform: rotateX(60deg);
-}
-
-
-
-
