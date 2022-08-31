@@ -1,53 +1,62 @@
 .subscribe {
-  z-index: 100;
+  position: relative;
   padding-top: 52px;
   padding-bottom: 60px;
-  text-align: left;
-}
-
-@media screen and (min-width: 768px) {
-  .subscribe {
+   
+ 
+  @include mq (tab){
     padding-top: 82px;
     padding-bottom: 100px;
-    text-align: left;
+  }
+  @include mq(desk) {
+    padding-top: 46px;
+    padding-bottom: 100px;
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .subscribe {
-    padding-top: 100px;
-    text-align: left;
+.subscribe__img{
+  position: absolute;
+  top: -10%;
+  
+ 
+  @include mq(tab){
+    position: absolute;
+    top: -20%;
+    right: 5%;
+    width: 281px;
+    height: 136px;
   }
-}
+  @include mq(desk){
+    position: absolute;
+    top: -10%;
+    width: 608px;
+    height: 266px;
+  }
 
-.subscribe__container {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
 }
 
 .subscribe__title {
-  text-align: left;
   max-width: 280px;
+ @include mq(tab){
+  max-width: 656px;
+ }
 
-  @media screen and (min-width: 756px) {
-    max-width: 656px;
-  }
 }
-
 .subscribe__descr {
-  text-align: left;
   margin-bottom: 40px;
   max-width: 280px;
-
-  @media screen and (min-width: 768px) {
+    @include mq(tab) {
     max-width: 656px;
+    margin-bottom: 24px;
   }
 }
 
 .subscribe__list {
   @extend %list;
 }
+
+
+
 
 .subscribe__form {
   display: flex;

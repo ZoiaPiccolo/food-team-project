@@ -1,6 +1,21 @@
 <section class="subscribe section" id="service">
-    <div class="subscribe__overlay">
+   
     <div class="container subscribe__container">
+        
+            <picture>
+                <source media="(max-width: 767px)"
+                srcset="./images/subscribe/mobile/pngwing.mobile.png 1x,
+                ./images/subscribe/mobile/pngwing.mobile@2x.png 2x"
+                type="image/png">
+                <source media="(min-width: 768px)"
+                srcset="./images/subscribe/tablet/pngwing.tablet.png 1x,
+                ./images/subscribe/tablet/pngwing.tablet@2x.png 2x"type="image/png">
+                <source media="(min-width: 1280px)"
+                srcset="./images/subscribe/desktop/banan.png 1x,
+                ./images/subscribe/desktop/banan@2x.png 2x" type="image/png">
+                <img src="./images/subscribe/desktop/banan.png" alt="banan" class="subscribe__img">
+            </picture>
+       
 
         <h2 class="section__title subscribe__title">Subscribe To Get Special Offers</h2>
         <p class="section__descr subscribe__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -20,16 +35,8 @@
                 Subscribe
             </button>
         </form>
+        
 </div>
-</div>
+
 </section>
 
-<!-- <label class="contact-form-group">
-    <input class="contact-form-input" type="text" name="user-name" placeholder="Antony Black" required minlength="3" />
-    <span class="contact-form-label">Имя*</span>
-    <svg class="contact-form-icon" width="20" height="20">
-        <use class="contact-form-warning" href="./images/icons.svg#icon-warning"></use>
-        <use class="contact-form-success" href="./images/icons.svg#icon-success"></use>
-    </svg>
-    <span class="contact-form-notfication">Укажите минимум 3 символа</span>
-</label> -->
