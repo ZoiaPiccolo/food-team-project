@@ -2,9 +2,8 @@
   position: relative;
   padding-top: 52px;
   padding-bottom: 60px;
-   
- 
-  @include mq (tab){
+
+  @include mq(tab) {
     padding-top: 82px;
     padding-bottom: 100px;
   }
@@ -14,38 +13,35 @@
   }
 }
 
-.subscribe__img{
+.subscribe__img {
   position: absolute;
   top: -10%;
-  
- 
-  @include mq(tab){
+
+  @include mq(tab) {
     position: absolute;
     top: -20%;
     right: 5%;
     width: 281px;
     height: 136px;
   }
-  @include mq(desk){
+  @include mq(desk) {
     position: absolute;
     top: -10%;
     width: 608px;
     height: 266px;
   }
-
 }
 
 .subscribe__title {
   max-width: 280px;
- @include mq(tab){
-  max-width: 656px;
- }
-
+  @include mq(tab) {
+    max-width: 656px;
+  }
 }
 .subscribe__descr {
   margin-bottom: 40px;
   max-width: 280px;
-    @include mq(tab) {
+  @include mq(tab) {
     max-width: 656px;
     margin-bottom: 24px;
   }
@@ -55,23 +51,20 @@
   @extend %list;
 }
 
-
-
+//form
 
 .subscribe__form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: block;
 
   @media screen and (min-width: 768px) {
     display: flex;
-    flex-direction: row;
+    gap: 20px;
   }
 }
 
 .subscribe__input {
   width: 100%;
-  max-width: 278px;
+  height: 42px;
   border: 0.854167px solid #ffe550;
   background-color: inherit;
   border-radius: 30px;
@@ -80,9 +73,13 @@
   line-height: calc(18 / 12);
   color: $main-text-color;
   outline: transparent;
+  margin-bottom: 20px;
 
   @media screen and (min-width: 768px) {
-    max-width: 395px;
+    width: 279px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 395px;
   }
 
   &::placeholder {
@@ -140,22 +137,19 @@
 }
 
 .subscribe__button {
+  text-align: right;
   margin-left: auto;
-  background-color: $greenbtn-color;
-  min-width: 103px;
-
-  padding-top: 11px;
-  padding-bottom: 11px;
-  padding-right: 22px;
-  padding-left: 22px;
-  border: transparent;
+  padding: 11px 22px;
+  border-color: transparent;
+  border-radius: 30px;
+  background-color: #bbf330;
+  margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+  }
 
   &:hover,
   &:focus {
     background-color: $greenbtnhover-color;
-  }
-
-  @media screen and (min-width: 768px) {
-    margin-left: 0;
   }
 }
