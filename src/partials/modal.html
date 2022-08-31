@@ -3,8 +3,8 @@
 <div class="backdrop is-hidden" data-modal>
   <div class="backdrop__modal">
     <button class="backdrop__btn" type="button" data-modal-close>
-      <svg class="backdrop__btn-icon" width="32px" height="32px">
-        <use href="./images/close.svg#icon-close"></use>
+      <svg class="backdrop__btn-icon" width="24px" height="24px">
+        <use href="./images/icons.svg#icon-close"></use>
       </svg>
     </button>
     <!--Form-modal-->
@@ -18,7 +18,18 @@
           name="Name"
           type="text"
           placeholder="Your name"
+          required
+          minlength="3"
+          maxlength="25"
         />
+        <p class="form__notification">
+          <svg class="form__icon" width="12" height="12">
+            <use
+              class="form__icon-eror"
+              href="./images/icons.svg#icon-warning2"
+            ></use></svg
+          >The name must be between 3 and 25 characters
+        </p>
       </label>
 
       <span class="form__text">Phone number</span>
@@ -27,8 +38,22 @@
           class="form__input"
           name="Phone"
           type="tel"
-          placeholder="+38(0_ _) _ _ _   _ _   _ _"
+          placeholder="(+38_) _ _ _  _ _  _ _"
+          required
+          pattern="+38[7-9]{2}-[0-9]{3}-[0-9]{4}"
+          value="+38"
+          minlength="13"
+          maxlength="13"
         />
+        <p class="form__notification">
+          <svg class="form__icon" width="12" height="12">
+            <use
+              class="form__icon-eror"
+              href="./images/icons.svg#icon-warning2"
+            ></use>
+          </svg>
+          This phone must be in the format +38 099 000 00 00
+        </p>
       </label>
 
       <span class="form__text">E-mail</span>
@@ -38,7 +63,16 @@
           name="Email"
           type="email"
           placeholder="example@gmail.com"
+          required
         />
+        <p class="form__notification">
+          <svg class="form__icon" width="12" height="12">
+            <use
+              class="form__icon-eror"
+              href="./images/icons.svg#icon-warning2"
+            ></use></svg
+          >Not a valid email address (example@email.com)
+        </p>
       </label>
 
       <button class="form__button main-btn" type="submit">Send</button>
