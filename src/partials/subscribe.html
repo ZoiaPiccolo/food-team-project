@@ -1,42 +1,63 @@
 <section class="subscribe section" id="service">
-   
-    <div class="container subscribe__container">
-        
-            <picture>
-                <source media="(max-width: 767px)"
-                srcset="./images/subscribe/mobile/pngwing.mobile.png 1x,
-                ./images/subscribe/mobile/pngwing.mobile@2x.png 2x"
-                type="image/png">
-                <source media="(min-width: 768px)"
-                srcset="./images/subscribe/tablet/pngwing.tablet.png 1x,
-                ./images/subscribe/tablet/pngwing.tablet@2x.png 2x" type="image/png">
-                <source media="(min-width: 1280px)"
-                srcset="./images/subscribe/desktop/banan.png 1x,
-                ./images/subscribe/desktop/banan@2x.png 2x" type="image/png">
-                <img src="./images/subscribe/desktop/banan.png" alt="banan" class="subscribe__img">
-            </picture>
-       
+  <div class="container subscribe__container">
+    <picture>
+      <source
+        media="(max-width: 767px)"
+        srcset="
+          ./images/subscribe/mobile/pngwing.mobile.png    1x,
+          ./images/subscribe/mobile/pngwing.mobile@2x.png 2x
+        "
+        type="image/png"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/subscribe/tablet/pngwing.tablet.png    1x,
+          ./images/subscribe/tablet/pngwing.tablet@2x.png 2x
+        "
+        type="image/png"
+      />
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          ./images/subscribe/desktop/banan.png    1x,
+          ./images/subscribe/desktop/banan@2x.png 2x
+        "
+        type="image/png"
+      />
+      <img
+        src="./images/subscribe/desktop/banan.png"
+        alt="banan"
+        class="subscribe__img"
+      />
+    </picture>
+    <h2 class="section__title subscribe__title">
+      Subscribe To Get Special Offers
+    </h2>
+    <p class="section__descr subscribe__descr">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      varius enim in eros elementum tristique.
+    </p>
+    <form class="subscribe__form">
+      <input
+        class="subscribe__input"
+        type="email"
+        placeholder="Enter your email"
+        required
+      />
+      <svg class="subscribe__icon" width="12" height="12">
+        <use
+          class="subscribe__icon-eror"
+          href="./images/icons.svg#icon-warning2"
+        ></use>
+      </svg>
+      <span class="subscribe__notification"
+        >Not a valid email address (example@email.com)</span
+      >
 
-        <h2 class="section__title subscribe__title">Subscribe To Get Special Offers</h2>
-        <p class="section__descr subscribe__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim
-            in eros elementum tristique.</p>
-        <form class="subscribe__form">
-            <input class="subscribe__input" 
-            type="email"
-            placeholder="Enter your email"
-            required>
-            <svg class="subscribe__icon" width="12" height="12">
-                <use class="subscribe__icon-eror" href="./images/icons.svg#icon-warning"></use>
-            </svg>
-            <span class="subscribe__notification">Not a valid email address (example@email.com)</span>
-         
-            <button class="subscribe__button main-btn" type="submit">
-                Subscribe
-            </button>
-        </form>
-        
-</div>
-
+      <button class="subscribe__button main-btn" type="submit">
+        Subscribe
+      </button>
+    </form>
+  </div>
 </section>
-
