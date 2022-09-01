@@ -53,6 +53,7 @@
 
 .subscribe__form {
   display: block;
+  position: relative;
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -115,8 +116,8 @@
   width: 100%;
 
   position: absolute;
-  bottom: 0;
-  left: 50%;
+  bottom: 62px;
+  left: 140px;
   transform: translate(-50%, 15px);
   transform-origin: center;
   opacity: 0;
@@ -126,12 +127,19 @@
   line-height: 150%;
   color: red;
   text-align: center;
+  @media screen and (min-width: 768px) {
+    bottom: 20px;
+    left: 140px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 12px;
+    bottom: 15px;
+    left: 190px;
+  }
 }
 
 .subscribe__icon {
-  position: absolute;
-  top: 0;
-  right: 5px;
+  margin-right: 4px;
 }
 
 .subscribe__button {
