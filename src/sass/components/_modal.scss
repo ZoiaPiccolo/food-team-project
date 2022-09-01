@@ -129,10 +129,10 @@
     transform: scale(1);
   }
 
-  &:invalid [type='submit'] {
+  &:invalid:focus-within [type='submit'] {
     border-color: #ff705d;
   }
-  &:valid [type='submit'] {
+  &:focus-within [type='submit'] {
     border-color: $darkgreen-color;
   }
   /*& &__input:invalid:required:not(:placeholder-shown) &__button {
@@ -184,6 +184,5 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-
   }
 }
