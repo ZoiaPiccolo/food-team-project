@@ -46,10 +46,7 @@
     }
   }
 
-  &__list {
-    @extend %list;
-  }
-
+  
   &__form {
     display: block;
     position: relative;
@@ -159,3 +156,17 @@
     }
   }
 }
+.subscribe__button{
+  animation: rotateY 1000ms infinite alternate-reverse cubic-bezier(0.4, 0, 0.2, 1) 1000ms;
+}
+
+ @keyframes rotateY {
+   0% {
+     transform: perspective(200px) rotateY(20deg);
+   }
+
+   100% {
+     transform: perspective(200px) rotateY(-20deg);
+   }
+ }
+ 

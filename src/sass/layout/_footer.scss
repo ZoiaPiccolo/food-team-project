@@ -300,3 +300,19 @@
     line-height: calc(14 / 12);
   }
 }
+
+.footer__button{
+  animation: changeBgcolor 2000ms infinite alternate-reverse cubic-bezier(0.4, 0, 0.2, 1) 1000ms;
+}
+
+@keyframes changeBgcolor{
+  0% {
+    background-color: $greenbtn-color;
+  }
+  50%{
+    background-color: $menubgd-color;
+  }
+  100%{
+    background-color: $yellow-color;
+  }
+}

@@ -31,6 +31,7 @@
   background-color: transparent;
   color: $darkgreen-color;
   border: none;
+  cursor: pointer;
   transition: color $transition;
 
   &:hover,
@@ -46,6 +47,7 @@
   position: absolute;
   right: 4px;
   top: 4px;
+  cursor: pointer;
 }
 
 .menu-container {
