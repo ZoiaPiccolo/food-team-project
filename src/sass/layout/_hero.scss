@@ -3,6 +3,7 @@
   padding-top: 60px;
   padding-bottom: 50px;
   @include mq(tab) {
+    margin-top: 72px;
     padding-bottom: 120px;
   }
   @include mq(desk) {
