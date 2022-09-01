@@ -1,88 +1,79 @@
-@include mq(mob-only){
-.header,
-.header-container {
-        position: relative;
-    }
-.header__content {
-            display: none;
-    }
+@include mq(mob-only) {
+  .header,
+  .header-container {
+    position: relative;
+  }
+  .header__content {
+    display: none;
+  }
 }
 
-
-.mobile__list{
-    @extend %list;
+.mobile__list {
+  @extend %list;
 }
 
 .mobile__link {
-    @extend %link;
-    padding: 16px;
-    font-size: 16px;
-    transition: background-color $transition;
-     
-   &:hover,
-   &:focus{
+  @extend %link;
+  padding: 16px;
+  font-size: 16px;
+  transition: background-color $transition;
+
+  &:hover,
+  &:focus {
     background-color: $greenbtn-color;
-   }
+  }
 }
 
 .menu__button {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    background-color: transparent;
-    color: $darkgreen-color;
-    border: none;
-    transition: color $transition;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  background-color: transparent;
+  color: $darkgreen-color;
+  border: none;
+  transition: color $transition;
 
-    &:hover,
-    &:focus {
-        color: $yellow-color;
-    }
+  &:hover,
+  &:focus {
+    color: $yellow-color;
+  }
 }
 
 .icon-menu {
-    fill: currentColor;
-} 
-.menu__button--close{
-    position: absolute;
-    right: 4px;
-    top: 4px;
+  fill: currentColor;
+}
+.menu__button--close {
+  position: absolute;
+  right: 4px;
+  top: 4px;
 }
 
-
 .menu-container {
-    position: absolute;
-    top: 50px;
-    right: 20px;
-    box-shadow: $menushadow-color;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    border-top-left-radius: 30px;
-    overflow: hidden;
-    min-width: 130px;
-    background-color: $menubgd-color;
-    opacity: 0;
-    transform: scale(0);
-    transition: transform $transition, opacity $transition;
-    
+  z-index: 100;
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  box-shadow: $menushadow-color;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+  overflow: hidden;
+  min-width: 130px;
+  background-color: $menubgd-color;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform $transition, opacity $transition;
 }
 
 .menu-container.is-open {
-    transform: scale(1);
-    opacity: 1;
-} 
-
-@include mq (tab) {
-
-    .menu__button,
-    .menu__button--close,
-    .menu-container {
-        display: none;
-    }
+  transform: scale(1);
+  opacity: 1;
 }
 
-
-
-
-
-
+@include mq(tab) {
+  .menu__button,
+  .menu__button--close,
+  .menu-container {
+    display: none;
+  }
+}
